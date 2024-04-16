@@ -8,35 +8,18 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class="no-js" lang="en">
 <!--<![endif]-->
-
+<!-- Head-->
 @await Component.InvokeAsync("HeadComponentPartial")
+<!-- end s-Head -->
 
 <body id="top">
 
-    <!-- header
-    ================================================== -->
-    <header class="s-header">
+    <!-- navbar-->
+    @await Component.InvokeAsync("NavbarComponentPartial")
+    <!-- end s-navbar -->
+    <!-- home-->
 
-        <div class="header-logo">
-            <a class="site-logo" href="index.html"><img src="~/HolaTemplate/images/logo.png" alt="Homepage"></a>
-        </div>
-
-        <nav class="header-nav-wrap">
-            <ul class="header-nav">
-                <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
-                <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                <li><a class="smoothscroll" href="#works" title="works">Works</a></li>
-                <li><a class="smoothscroll" href="#blog" title="blog">Blog</a></li>
-                <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-
-    </header> <!-- end s-header -->
-    <!-- home
-    ================================================== -->
-    <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="~/HolaTemplate/images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="~/HolaTemplate/images/herobg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -160,78 +143,80 @@
 
         </div> <!-- end about-content buttons -->
 
+
         <div class="row about-content about-content--timeline">
+            <section id="experience" class="s-experience target-section">
+                <div class="col-full text-center">
+                    <h3>My Work Experience.</h3>
+                </div>
 
-            <div class="col-full text-center">
-                <h3>My Work Experience.</h3>
-            </div>
+                <div class="col-six tab-full left">
+                    <div class="timeline">
 
-            <div class="col-six tab-full left">
-                <div class="timeline">
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">July 2015 - Present</p>
+                                <h3>Awesome Studio</h3>
+                                <h5>Lead Designer</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
+                            </div>
+                        </div> <!-- end timeline__block -->
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">July 2015 - Present</p>
-                            <h3>Awesome Studio</h3>
-                            <h5>Lead Designer</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">July 2014 - June 2015</p>
+                                <h3>Super Cool Agency</h3>
+                                <h5>Front-end Developer</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+                            </div>
+                        </div> <!-- end timeline__block -->
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">July 2014 - June 2015</p>
-                            <h3>Super Cool Agency</h3>
-                            <h5>Front-end Developer</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
+                    </div> <!-- end timeline -->
+                </div> <!-- end left -->
 
-                </div> <!-- end timeline -->
-            </div> <!-- end left -->
+                <div class="col-six tab-full right">
+                    <div class="timeline">
 
-            <div class="col-six tab-full right">
-                <div class="timeline">
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">July 2012 - June 2014</p>
+                                <h3>Great Design Studio</h3>
+                                <h5>Web Designer</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
+                            </div>
+                        </div> <!-- end timeline__block -->
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">July 2012 - June 2014</p>
-                            <h3>Great Design Studio</h3>
-                            <h5>Web Designer</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">July 2011 - June 2012</p>
+                                <h3>Epic Design Agency</h3>
+                                <h5>Web Designer</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+                            </div>
+                        </div> <!-- end timeline__block -->
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">July 2011 - June 2012</p>
-                            <h3>Epic Design Agency</h3>
-                            <h5>Web Designer</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                </div> <!-- end timeline -->
-            </div> <!-- end right -->
+                    </div> <!-- end timeline -->
+                </div> <!-- end right -->
+            </section>
 
         </div> <!-- end about-content timeline -->
 
     </section> <!-- end about -->
     <!-- works
     ================================================== -->
-    <section id="works" class="s-works target-section">
+    <section id="portfolio" class="s-works target-section">
 
         <div class="row narrow section-intro has-bottom-sep">
             <div class="col-full">
@@ -499,61 +484,63 @@
     </section> <!-- end works -->
     <!-- testimonials
     ================================================== -->
-    <div class="s-testimonials">
+    <section id="testimonials" class="s-testimonials target-section">
+        <div class="s-testimonials">
 
-        <div class="overlay"></div>
+            <div class="overlay"></div>
 
-        <div class="row testimonials-header">
-            <div class="col-full">
-                <h1 class="h02">What People Say.</h1>
+            <div class="row testimonials-header">
+                <div class="col-full">
+                    <h1 class="h02">What People Say.</h1>
+                </div>
             </div>
-        </div>
 
-        <div class="row testimonials">
+            <div class="row testimonials">
 
-            <div class="col-full testimonials__slider">
+                <div class="col-full testimonials__slider">
 
-                <div class="testimonials__slide">
-                    <img src="~/HolaTemplate/images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
-                    <p>
-                        Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum.
-                        Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium corpori.
-                    </p>
-                    <div class="testimonials__author h06">
-                        Tim Cook
-                        <span>CEO, Apple</span>
+                    <div class="testimonials__slide">
+                        <img src="~/HolaTemplate/images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                        <p>
+                            Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum.
+                            Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium corpori.
+                        </p>
+                        <div class="testimonials__author h06">
+                            Tim Cook
+                            <span>CEO, Apple</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="testimonials__slide">
-                    <img src="~/HolaTemplate/images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
-                    <p>
-                        Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                        Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.
-                    </p>
-                    <div class="testimonials__author h06">
-                        Sundar Pichai
-                        <span>CEO, Google</span>
+                    <div class="testimonials__slide">
+                        <img src="~/HolaTemplate/images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
+                        <p>
+                            Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
+                            Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.
+                        </p>
+                        <div class="testimonials__author h06">
+                            Sundar Pichai
+                            <span>CEO, Google</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="testimonials__slide">
-                    <img src="~/HolaTemplate/images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
-                    <p>
-                        Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
-                    </p>
-                    <div class="testimonials__author h06">
-                        Satya Nadella
-                        <span>CEO, Microsoft</span>
+                    <div class="testimonials__slide">
+                        <img src="~/HolaTemplate/images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
+                        <p>
+                            Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                            Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
+                        </p>
+                        <div class="testimonials__author h06">
+                            Satya Nadella
+                            <span>CEO, Microsoft</span>
+                        </div>
                     </div>
-                </div>
 
-            </div> <!-- end testimonials__slider -->
+                </div> <!-- end testimonials__slider -->
 
-        </div> <!-- end testimonials -->
+            </div> <!-- end testimonials -->
 
-    </div> <!-- end s-testimonials -->
+        </div> <!-- end s-testimonials -->
+    </section>
     <!-- blog
     ================================================== -->
     <section id="blog" class="s-blog target-section">
