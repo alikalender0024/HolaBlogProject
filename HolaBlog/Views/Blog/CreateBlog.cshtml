@@ -1,0 +1,40 @@
+﻿@model Blog
+
+@{
+    ViewData["Title"] = "CreateBlog";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Bloglar</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Blog Ekleme Sayfası</div>
+                    </div>
+                    <div class="card-body">
+
+                        <form method="post">
+                            <label>Başlık</label>
+                            <input type="text" asp-for="Title" class="form-control" />
+                            <br />
+                            <label>Açıklama</label>
+                            <textarea rows="4" class="form-control" asp-for="Description"></textarea>
+                            <br />
+                            <label>Tarih</label>
+                            <input type="text" asp-for="Date" class="form-control" />
+                            <br />
+                            <label>Alan</label>
+                            <input type="text" asp-for="JobArea" class="form-control" />
+                            <br />
+                            <button class="btn btn-success">Blogu Ekle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
