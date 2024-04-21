@@ -1,0 +1,47 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "MessageDetail";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title" style="font-family: 'Roboto', sans-serif; font-weight: bold;">Mesajlar</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title" style="font-size: 18px;">Gelen Mesaj Listesi</div>
+                    </div>
+                    <div class="card-body">
+                        <input type="hidden" asp-for="MessageID" />
+                        <div class="card-sub">
+                            <table style="width: 100%; border-collapse: collapse; font-family: 'Arial', sans-serif;">
+                                <tr>
+                                    <th style="padding: 8px; border: 1px solid #ddd; background-color: #f2f2f2;">Gönderen</th>
+                                    <th style="padding: 8px; border: 1px solid #ddd; background-color: #f2f2f2;">Email</th>
+                                    <th style="padding: 8px; border: 1px solid #ddd; background-color: #f2f2f2;">Tarih</th>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #ddd;">@Model.NameSurname</td>
+                                    <td style="padding: 8px; border: 1px solid #ddd;">@Model.Email</td>
+                                    <td style="padding: 8px; border: 1px solid #ddd;">@Model.SendDate</td>
+                                </tr>
+                            </table>
+                            <br>
+                            <br>
+                            <table style="width: 100%; border-collapse: collapse; font-family: 'Arial', sans-serif;">
+                                <tr>
+                                    <th style="padding: 8px; border: 1px solid #ddd; background-color: #f2f2f2;">Mesaj</th>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #ddd;">@Model.Content</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
