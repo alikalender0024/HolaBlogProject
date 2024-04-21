@@ -1,0 +1,42 @@
+﻿@model List<HolaBlog.Entities.Blog>
+>
+<section id="blog" class="s-blog target-section">
+
+    <div class="row narrow section-intro has-bottom-sep">
+        <div class="col-full">
+            <h3>Blogum</h3>
+            <h1>Blogdan Son Haberler.</h1>
+            <p class="lead">
+                
+            </p>
+        </div>
+    </div>
+
+    <div class="row blog-content">
+        <div class="col-full">
+
+            <div class="blog-list block-1-2 block-tab-full">
+                @foreach (var item in @Model)
+                {
+                    <article class="col-block">
+
+                        <div class="blog-date">
+                            <a href="blog-single.html">@item.Date</a>
+                        </div>
+
+                        <h2 class="h01"><a href="blog-single.html">@item.Title</a></h2>
+                        <p>
+                            @item.Description
+                        </p>
+
+                        <div class="blog-cat">
+                            <a href="blog.html">@item.JobArea</a>
+                        </div>
+                    </article>
+                }
+            </div> 
+
+        </div>
+    </div>
+
+</section>
