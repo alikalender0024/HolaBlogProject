@@ -1,38 +1,34 @@
 ﻿<section id="portfolio" class="s-works target-section">
-    @foreach (var item in Model)
-    {
-        <div class="row narrow section-intro has-bottom-sep">
-            <div class="col-full">
-                <h3>Portföyüm</h3>
-                <h1>@item.Title</h1>
-                <p class="lead">@item.Description</p>
-            </div>
+    <div class="row narrow section-intro has-bottom-sep">
+        <div class="col-full">
+            <h3>Portföyüm</h3>
+            <h1>Merhabalar</h1>
+            <p class="lead">Aşağıda projelerim mevcuttur inceleyebilirsiniz.</p>
         </div>
-
-        <div class="row masonry-wrap">
-            <div class="masonry">
-                <div class="masonry__brick">
-                    <div class="item-folio">
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-@item.ImageUrl" class="thumb-link" title="The Beetle Car" data-size="1050x700">
-                                <img src="~/HolaTemplate/images/portfolio/@item.ImageUrl" srcset="~/HolaTemplate/images/portfolio/@item.ImageUrl 1x, ~/HolaTemplate/images/portfolio/@item.ImageUrl 2x" alt="">
-                                <span class="shadow-overlay"></span>
-                            </a>
-                        </div>
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                @item.ProjectName
-                            </h3>
-                            <p class="item-folio__cat">
-                                @item.JobArea
-                            </p>
-                        </div>
-                        <a href="@item.ProjectUrl" class="item-folio__project-link" title="Project link">
-                            <i class="im im-link"></i>
+    </div>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-12" style="margin-bottom: 20px;">
+                <div class="item-folio">
+                    <div class="item-folio__thumb" style="width: 200px; height: 200px; overflow: hidden;">
+                        <a href="images/portfolio/gallery/g-@item.ImageUrl" class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                            <img src="~/HolaTemplate/images/portfolio/gallery/@item.ImageUrl" alt="">
                         </a>
                     </div>
+                    <div class="item-folio__text">
+                        <h3 class="item-folio__title">
+                            @item.ProjectName
+                        </h3>
+                        <p class="item-folio__cat">
+                            @item.JobArea
+                        </p>
+                    </div>
+                    <a href="@item.ProjectUrl" class="item-folio__project-link" title="Project link">
+                        <i class="im im-link"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </section>
