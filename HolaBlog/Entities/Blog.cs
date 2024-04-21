@@ -7,5 +7,6 @@
         public string Description { get; set; }
         public string Date { get; set; }
         public string JobArea { get; set; }
+        public string Url { get; set; }
     }
 }
