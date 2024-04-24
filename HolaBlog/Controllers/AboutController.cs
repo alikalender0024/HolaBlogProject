@@ -32,9 +32,10 @@ namespace HolaBlog.Controllers
         [HttpGet]
         public IActionResult UpdateAbout(int id)
         {
-            var updateAbout = GetAboutById(id);
-            return View(updateAbout);
+            var value = _holaBlogContext.Abouts.Find(id);
+            return View(value);
         }
+
         [HttpPost]
         public IActionResult UpdateAbout(About about)
         {
@@ -59,7 +60,7 @@ namespace HolaBlog.Controllers
             else
             {
                 throw new Exception("Nesne Bulunumadı!");
-            } 
+            }
         }
 
     }
